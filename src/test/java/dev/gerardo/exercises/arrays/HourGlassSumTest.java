@@ -1,5 +1,6 @@
-package dev.gerardo.exercises;
+package dev.gerardo.exercises.arrays;
 
+import dev.gerardo.exercises.arrays.HourGlassSum;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

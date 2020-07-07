@@ -1,5 +1,6 @@
-package dev.gerardo.exercises;
+package dev.gerardo.exercises.warmup;
 
+import dev.gerardo.exercises.warmup.RepeatedString;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -1,5 +1,7 @@
-package dev.gerardo.exercises;
+package dev.gerardo.exercises.warmup;
 
+import dev.gerardo.exercises.SockMerchant;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,7 +10,7 @@ public class SockMerchantTest {
 
     @Test
     public void firstSampleTest(){
-        assertEquals(3, SockMerchant.countPairs(9, new int[] {10, 20, 20, 10, 10, 30, 50, 10, 20}));
+        Assertions.assertEquals(3, SockMerchant.countPairs(9, new int[] {10, 20, 20, 10, 10, 30, 50, 10, 20}));
     }
 
     @Test
