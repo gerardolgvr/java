@@ -13,7 +13,7 @@ package dev.gerardo.exercises;
 
 public class HourGlassSum {
     public static int getHigher(int[][] arr) {
-        int sum = 0;
+        int sum = -64;
         int auxSum = 0;
 
         for(int i = 1; i < arr.length - 1; i++) {
