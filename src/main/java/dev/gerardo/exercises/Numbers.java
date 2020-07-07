@@ -35,4 +35,16 @@ public class Numbers {
 
         return "" + numbersArrayInt[numbersArrayInt.length - 1] + " " + numbersArrayInt[0];
     }
+
+    /* Arrays: Left rotarion: https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays
+     */
+    public static int[] rotLeft(int[] a, int d) {
+        int[] res = new int[a.length];
+        for(int i = 0; i < a.length; i++){
+            int op = i + d;
+            int index = op >= a.length ? op - a.length : op;
+            res[i] = a[index];
+        }
+        return res;
+    }
 }
