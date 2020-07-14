@@ -1,5 +1,6 @@
-package dev.gerardo.exercises;
+package dev.gerardo.exercises.codewars;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,7 +9,7 @@ public class PinTest {
 
     @Test
     public void validPins() {
-        assertEquals(true, Pin.validate("1234"));
+        Assertions.assertEquals(true, Pin.validate("1234"));
         assertEquals(true, Pin.validate("0000"));
         assertEquals(true, Pin.validate("1111"));
         assertEquals(true, Pin.validate("123456"));

@@ -1,4 +1,4 @@
-package dev.gerardo.exercises;
+package dev.gerardo.exercises.codewars;
 
 /* Find the missing letter
 
