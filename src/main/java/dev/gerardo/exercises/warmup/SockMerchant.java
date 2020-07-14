@@ -1,4 +1,4 @@
-package dev.gerardo.exercises;
+package dev.gerardo.exercises.warmup;
 
 /*
 John works at a clothing store. He has a large pile of socks that he must pair by color for sale. Given an array of integers representing the color of each sock, determine how many pairs of socks with matching colors there are.
@@ -21,20 +21,26 @@ The second line contains  space-separated integers describing the colors  of the
 Return the total number of matching pairs of socks that John can sell.
  */
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 public class SockMerchant {
     public static int countPairs(int n, int[] ar) {
-        HashSet<Integer> map = new HashSet<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
         int pairs = 0;
 
-        for(int i = 0; i < ar.length - 1; i++) {
-            if(map.contains(ar[i])) {
-                pairs ++;
-                map.remove(ar[i]);
+        for(int i = 0; i < ar.length; i++) {
+            if(map.containsKey(ar[i])) {
+                int val = map.get(ar[i]);
+                map.put(ar[i], ++val);
             } else {
-                map.add(ar[i]);
+                map.put(ar[i], 1);
             }
+        }
+
+        for (Map.Entry<Integer, Integer> item : map.entrySet()){
+            pairs += item.getValue() / 2;
         }
 
         return pairs;
