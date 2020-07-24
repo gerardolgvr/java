@@ -3,6 +3,7 @@ package dev.gerardo.exercises.arrays;
 import java.util.HashSet;
 
 public class NewYearChaos {
+
     public static String minimumBribes(int[] q) {
         int sumDifferences = 0;
 
@@ -25,10 +26,13 @@ public class NewYearChaos {
         int[] swapsArrayCount = new int[q.length];
         int sumSwaps = 0;
 
+        if(q.length > 10){
+            return "Invalid queue";
+        }
+
         for(int i = 0; i < q.length - 1; i++){
             for(int j = 0; j < q.length - i - 1; j++){
-                if (q[j] > q[j+1])
-                {
+                if (q[j] > q[j+1]) {
                     // swap arr[j+1] and arr[i]
                     int temp = q[j];
                     q[j] = q[j+1];
@@ -42,13 +46,11 @@ public class NewYearChaos {
                     // check if swaps are higher than 2
                     if(swapsArrayCount[valueItemPos] > 2)
                         return "Too chaotic";
+
+                    // sumarizing swaps
+                    sumSwaps ++;
                 }
             }
-        }
-
-        // sumarizing swaps
-        for(int i = 0; i < swapsArrayCount.length; i++){
-            sumSwaps += swapsArrayCount[i];
         }
 
         return String.valueOf(sumSwaps);
@@ -98,4 +100,5 @@ public class NewYearChaos {
             System.out.println(sumSwaps);
         }
     }
+
 }
