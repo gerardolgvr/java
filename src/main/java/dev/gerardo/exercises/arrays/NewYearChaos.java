@@ -30,6 +30,7 @@ public class NewYearChaos {
             return "Invalid queue";
         }
 
+        // 2 1 5 3 4
         for(int i = 0; i < q.length - 1; i++){
             for(int j = 0; j < q.length - i - 1; j++){
                 if (q[j] > q[j+1]) {
@@ -99,6 +100,38 @@ public class NewYearChaos {
 
             System.out.println(sumSwaps);
         }
+    }
+
+    public static String minimumBribesHackRankVersionP(int[] q) {
+        int count = 0;
+        if(q.length <= 10) {
+            for(int i = q.length - 1; i <= 0; i--) {
+
+                if(q[i] != (i+1)) { //q[4] == 5
+                    if(q[i-1] == (i+1)) { // q[3] = 3 == 5
+                        int aux = q[i-1];
+                        q[i-1] = q[i];
+                        q[i] = aux;
+                        count++;
+                    }
+                    if(q[i-2] == (i+1)) { //q[2] == 4 == 5
+                        count = count + 2;
+                        int aux = q[i-2];
+                        q[i-2] = q[i];
+                        q[i] = aux;
+                    }
+                    else {
+                        return "Too chaotic";
+                    }
+                }
+
+            }
+            return String.valueOf(count);
+        } else {
+            return "Invalid queue";
+        }
+
+
     }
 
 }
