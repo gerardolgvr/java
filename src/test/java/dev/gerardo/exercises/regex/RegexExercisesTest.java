@@ -111,7 +111,7 @@ public class RegexExercisesTest {
         assertEquals(true, RegexExercises.validateW("www.maps.google.com"));
         assertEquals(true, RegexExercises.validateW("http://www.google.com"));
         assertEquals(true, RegexExercises.validateW("https://www.google.com"));
-        assertEquals(true, RegexExercises.validateW("http://www.sample.com/#xyz"));
+        assertEquals(false, RegexExercises.validateW("http://www.sample.com/#xyz"));
     }
 
     @Test
