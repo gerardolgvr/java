@@ -7,9 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ClimbTest {
 
-    @Test
+    /*@Test
     public void sample(){
         Assertions.assertEquals(3, Climb.countingValleys(8, "UDDDUDUU"));
-    }
+    }*/
 
 }
