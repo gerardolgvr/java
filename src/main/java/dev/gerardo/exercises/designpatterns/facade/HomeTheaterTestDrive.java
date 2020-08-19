@@ -15,7 +15,7 @@ public class HomeTheaterTestDrive {
         HomeTheaterFacade homeTheater =
                 new HomeTheaterFacade(amp, tuner, dvd, cd, projector, lights, screen, popper);
 
-        homeTheater.watchMovie("La toalla del mojado 2");
+        homeTheater.watchMovie("La toalla del mojado 3");
         homeTheater.endMovie();
 
     }
